@@ -357,7 +357,7 @@ const people = [
 // eslint-disable-next-line no-console
 
 const arrOfPeople = document.querySelector('.dashboard');
-
+let html = '';
 people.forEach((person) => {
   const row = `<tr>
                 <th>${person.name}</th>
@@ -368,6 +368,7 @@ people.forEach((person) => {
                 <th>${Math.ceil(person.died / 100)}</th>
                </tr>`;
 
-  arrOfPeople.innerHTML += row;
+  html += row;
 });
+arrOfPeople.innerHTML += html;
 // console.log(arrOfPeople)
